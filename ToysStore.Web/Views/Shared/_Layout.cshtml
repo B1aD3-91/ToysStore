@@ -1,0 +1,119 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+
+    @Styles.Render("~/Content/css")
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div id="wrapper-container">
+        <div class="container">
+            <div id="wrapper-row" class="row align-items-center">
+                <div class="col-lg">
+                    <div class="row no-gutters align-items-center">
+                        <div class="col">
+                            <img id="logo" src="~/Content/img/logo.png" />
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-lg">
+                    <div class="row no-gutters">
+                        <div class="col">
+                            @using (Ajax.BeginForm("Search", "Source", null, new AjaxOptions { UpdateTargetId = "contentlist", LoadingElementId = "loadingspinner" }))
+                            {
+                                <div class="row no-gutters justify-content-center">
+                                    <div class=" col-lg-8 col-10">
+                                        <input name="s" id="section-search" class="form-control" type="search" placeholder="Пошук..." aria-label="Search" required />
+                                    </div>
+                                    <div class="col-lg-2 col-2">
+                                        <button id="section-search-btn" class="btn btn-light" type="submit"><i class="fa fa-search"></i></button>
+                                    </div>
+                                </div>
+                            }
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="top" class="container">
+        <nav id="navbar" class="navbar navbar-expand-lg navbar-light bg-default sticky-top shadow">
+            <div class="container-lg">
+                @Html.Action("AddToCart", "Cart")
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsecontent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-center" id="collapsecontent">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a href="@Url.Action("Index", "Main")" class="nav-link d-flex">
+                                <i class="fa fa-circle fa-2x"></i>
+                                <div class="navbar-text ml-2">
+                                    Головна
+                                </div>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="@Url.Action("Catalog", "Toy")" class="nav-link d-flex">
+                                <i class="fa fa-cubes fa-2x"></i>
+                                <div class="navbar-text ml-2">
+                                    Каталог
+                                </div>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="@Url.Action(null, "Toy")" class="nav-link d-flex">
+                                <i class="fa fa-cube fa-2x"></i>
+                                <div class="navbar-text ml-2">
+                                    Доставка
+                                </div>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="@Url.Action(null, "Toy")" class="nav-link d-flex">
+                                <i class="fa fa-at fa-2x"></i>
+                                <div class=" navbar-text ml-2">
+                                    Контакти
+                                </div>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="@Url.Action("Index", "Editor")" class="nav-link d-flex">
+                                <i class="fa fa-pencil fa-2x"></i>
+                                <div class=" navbar-text ml-2">
+                                    Редактор
+                                </div>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="@Url.Action("Index", "CategoryEditor")" class="nav-link d-flex">
+                                <i class="fa fa-pencil fa-2x"></i>
+                                <div class="navbar-text ml-2">
+                                    Категорий
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+
+    <div id="contentlist" class="container-lg">
+        @*<div class="d-flex justify-content-center">
+                <div id="loadingspinner" class="spinner-border" role="status" style="display:none;">
+                    <span class="sr-only">Завантаження...</span>
+                </div>
+            </div>*@
+        @RenderBody()
+    </div>
+
+    @Scripts.Render("~/Scripts/js")
+    @Scripts.Render("~/Scripts/unAjax")
+</body>
+</html>

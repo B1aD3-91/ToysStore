@@ -1,0 +1,48 @@
+﻿@model ToysStore.Web.Models.DomainModel.Toy
+
+<div class="col-md-6 col-lg-6">
+    <div id="goods-item" class="shadow-sm">
+        <div  id="desc-item" class="row">
+            <div class="col-4">
+                @if (Model.PicSrc != null)
+                {
+                    <img src="@Model.PicSrc" class="rounded" alt="..." />
+                }
+                else
+                {
+                    <img src="~/Content/img/altpic.jpg" class="rounded" alt="..." />
+                }
+            </div>
+            <div class="col-8" id="desc">
+                <h6 class="card-title">@Model.Name</h6>
+                <h4 class="card-text"><small class="text-muted">Артикул: @Model.Art</small></h4>
+                <h4 class="card-text"><small class="text-muted">Ціна: </small>@Model.Price<small class="text-muted"> грн.</small></h4>
+                @{
+                    if (Model.Quantity <= 0)
+                    {
+                        <h6 id="text-warning" class="card-text">Немає в наявності.</h6>
+                    }
+                }
+            </div>
+        </div>
+        <div class="row">
+            <div id="item-btn" class="col d-flex justify-content-start">
+                @using (Ajax.BeginForm("AddToCart", "Cart", new AjaxOptions { UpdateTargetId = "shopping-cart-summary" }))
+                {
+                    @Html.HiddenFor(x => x.Id)
+                    @Html.Hidden("returnURL", Request.Url.PathAndQuery)
+                    if (Model.Quantity > 0)
+                    {
+                        <input class="btn btn-success float-right" type="submit" value="В корзину" />
+                    }
+                    else
+                    {
+                        <input class="btn btn-success float-right" type="submit" value="В корзину" disabled />
+                    }
+                }
+            </div>
+        </div>
+    </div>
+</div>
+
+

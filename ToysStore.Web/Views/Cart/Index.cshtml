@@ -1,0 +1,55 @@
+﻿@model ToysStore.Web.Models.ViewModel.CartIndexViewModel
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>@ViewBag.Title</title>
+</head>
+<body>
+    <h2>Ваша корзина</h2>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th scope="col">Артикул</th>
+                <th scope="col">Назва</th>
+                <th scope="col">Категорія</th>
+                <th scope="col">Кількість</th>
+                <th scope="col">Ціна</th>
+                <th scope="col">Загальна сума</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var line in Model.Cart.ListItem)
+            {
+                <tr>
+                    <td class="text-left">@line.Toy.Art</td>
+                    <td class="text-left">@line.Toy.Name</td>
+                    <td class="text-left">@line.Toy.Category.Categories</td>
+                    <td class="text-center">@line.Quantity</td>
+                    <td class="text-right">@line.Toy.Price.ToString("C2")</td>
+                    <td class="text-right">@((line.Quantity * line.Toy.Price).ToString("C2"))</td>
+                    <td>
+                        @using (Html.BeginForm("RemoveFromcart", "Cart"))
+                        {
+                            @Html.Hidden("Id", line.Toy.Id)
+                            @Html.HiddenFor(x => x.ReturnUrl)
+                            <input class="btn btn-sm btn-danger" type="submit" value="Видалити" />
+                        }
+                    </td>
+            </tr>
+        }
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="5" class="text-right">Загалом:</td>
+                <td class="text-right">
+                    @Model.Cart.ComputeTotalPrice().ToString("C2")
+                </td>
+            </tr>
+        </tfoot>
+    </table>
+
+    <div class="text-center">
+        <a class="btn btn-primary" href="@Model.ReturnUrl">Продовжити покупки</a>
+    </div>
+</body>
+</html>

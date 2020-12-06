@@ -1,0 +1,10 @@
+﻿@model ToysStore.Web.Models.DomainModel.Cart
+
+<div id="shopping-cart-summary" class="d-flex justify-content-left align-items-center">
+    <div class="">
+        <a href="@Url.Action("Index", "Cart")"><i id="basket-img" class="fa fa-shopping-cart fa-2x"></i></a>
+    </div>
+    <div class="ml-2">
+        <h5 class="font-weight-bold card-text text-right">@Model.ComputeTotalPrice().ToString("C2")</h5>
+    </div>
+</div>
