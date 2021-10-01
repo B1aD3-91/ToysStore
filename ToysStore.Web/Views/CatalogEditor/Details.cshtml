@@ -1,0 +1,76 @@
+﻿@model ToysStore.Web.Models.DomainModel.Toy
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<style>
+    body {
+        background-image: url('../../Content/img/background/99px_ru_photo_317263_akula_s_medvejimi_lapkami_by_cryptidcreations.png');
+        background-repeat: no-repeat;
+        background-position: 50% 300px;
+        background-attachment: fixed;
+        background-size: 50%;
+    }
+</style>
+
+<h2>Details</h2>
+
+<div>
+    <h4>Toy</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Category.Categories)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Category.Categories)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Art)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Art)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Quantity)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Quantity)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Price)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Price)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PicSrc)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PicSrc)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id, @class = "btn" }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

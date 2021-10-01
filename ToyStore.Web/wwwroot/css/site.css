@@ -1,0 +1,164 @@
+﻿::-webkit-scrollbar {
+    width: 0px;
+}
+
+body {
+    font-size: 16px;
+}
+
+#logo {
+    width: 40%;
+    image-rendering: -moz-crisp-edges;
+}
+
+a {
+    text-decoration: none;
+}
+
+.fa {
+    padding: 2px;
+    margin-top: 2px;
+    color: orange;
+}
+
+.nav-link {
+    border-right: 1px solid #ddd;
+    border-left: 1px solid #ddd
+}
+
+.nav-link:hover {
+    background-color: #ddd
+}
+#navbar {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    margin-top: -40px;
+    margin-bottom: 20px;
+}
+
+#wrapper-container {
+    display: inline-block;
+    height: 200px;
+    width: 100%;
+    background-color: #7EBD23;
+}
+
+#wrapper-row {
+    height: 160px;
+}
+
+.bg-default {
+    background-color: white;
+}
+
+#section-search {
+    padding: 0 0 0 20px;
+    font-size: 20px;
+    height: 72px;
+    border: 1px solid #cccccc;
+    border-right-color: #fff;
+    border-bottom-right-radius: 0;
+    border-top-right-radius: 0;
+    background-color: #fff;
+    width: 100%;
+}
+
+#section-search-btn {
+    padding: 0;
+    font-size: 20px;
+    height: 72px;
+    border: 1px solid #cccccc;
+    border-left-color: #fff;
+    border-bottom-left-radius: 0;
+    border-top-left-radius: 0;
+    background-color: #fff;
+    width: 100%;
+}
+
+#section-search-slogan {
+    padding: 20px 25px;
+    font-family: 'Pacifico', cursive;
+}
+
+#list-goods {
+    padding: 10px;
+}
+
+#goods-item {
+    border: 1px solid #ddd;
+    border-spacing: 20px;
+    padding: 10px 5px 10px 10px;
+    margin-top: 10px;
+    height: 200px;
+    border-radius: 4px;
+    background-color: white;
+    opacity: 0.9;
+}
+
+#desc {
+    padding-left: 0px;
+}
+
+#desc-item {
+    height: 130px;
+}
+
+#item-btn {
+}
+
+#goods-item:hover {
+    border: 2px solid orange;
+}
+
+#goods-item img {
+    width: 100%;
+    max-width: 128px;
+}
+
+.pagination {
+    margin: 10px;
+}
+
+
+.list-group {
+    margin-top: 10px;
+}
+
+.card-title {
+    margin-bottom: 5px;
+}
+
+.card-text {
+    margin-bottom: 5px;
+}
+
+.list-group-item {
+    padding: 12px 10px 12px 10px;
+}
+
+.page-item.active .page-link {
+    background-color: #28a745;
+    border-color: #28a745;
+}
+
+.page-link {
+    color: #28a745;
+}
+
+#text-warning {
+    color: orange;
+}
+
+li {
+    list-style-type: none;
+}
+
+ul {
+    margin-left: 0;
+    padding-left: 0;
+    margin-bottom: 0;
+}
+
+#shopping-cart-summary {
+    width: 150px;
+}

@@ -1,0 +1,22 @@
+﻿@model ToysStore.Web.Models.ViewModel.ToyViewModel
+<div class="row">
+    <div class="col-lg-3">
+        <button class="list-group" asp-action="GetCategories" asp-controller="Catalog">
+        </button>
+    </div>
+    <div class="col-lg-9">
+        <div class="row">
+            @if (Model.Toys.Any())
+            {
+                foreach (var item in Model.Toys)
+                {
+                    @Html.PartialAsync("ToysListBody", item);
+                }
+            }
+            else
+            {
+                @Html.PartialAsync("SearchError")
+            }
+        </div>
+    </div>
+</div>

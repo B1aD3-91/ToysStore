@@ -1,0 +1,23 @@
+﻿@model ToysStore.Web.Models.ViewModel.ToyViewModel
+<div class="row">
+    <div class="col-lg-3">
+        <div class="list-group">
+            @Html.Action("GetCategories", "Catalog")
+        </div>
+    </div>
+    <div class="col-lg-9">
+        <div class="row">
+            @if (Model.Toys.Any())
+            {
+                foreach (var item in Model.Toys)
+                {
+                    @Html.Partial("ToysListBody", item);
+                }
+            }
+            else
+            {
+                @Html.Partial("SearchError")
+            }
+        </div>
+    </div>
+</div>

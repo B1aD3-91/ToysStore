@@ -1,6 +1,7 @@
 ﻿<!DOCTYPE html>
 <html>
 <head>
+    <meta http-equiv="Cache-Control" content="no-cache">
     <meta name="viewport" content="width=device-width" />
     <title>@ViewBag.Title</title>
 
@@ -10,22 +11,17 @@
 <body>
 
     <div id="wrapper-container">
-        <div class="container">
+        <div class="container-xl">
             <div id="wrapper-row" class="row align-items-center">
-                <div class="col-lg">
-                    <div class="row no-gutters align-items-center">
-                        <div class="col">
-                            <img id="logo" src="~/Content/img/logo.png" />
-                        </div>
-
-                    </div>
+                <div class="col-sm">
+                    <img id="logo" src="~/Content/img/logo.png" href="@Url.Action("Index","Main")" />
                 </div>
-                <div class="col-lg">
-                    <div class="row no-gutters">
-                        <div class="col">
-                            @using (Ajax.BeginForm("Search", "Source", null, new AjaxOptions { UpdateTargetId = "contentlist", LoadingElementId = "loadingspinner" }))
+                <div class="col-sm">
+                    <div class="row gx-0">
+                        <div class="col-lg">
+                            @using (Ajax.BeginForm("Search", "Catalog", null, new AjaxOptions { UpdateTargetId = "contentlist", LoadingElementId = "loadingspinner" }))
                             {
-                                <div class="row no-gutters justify-content-center">
+                                <div class="row gx-0 justify-content-center">
                                     <div class=" col-lg-8 col-10">
                                         <input name="s" id="section-search" class="form-control" type="search" placeholder="Пошук..." aria-label="Search" required />
                                     </div>
@@ -40,7 +36,7 @@
             </div>
         </div>
     </div>
-    <div id="top" class="container">
+    <div id="top" class="container-lg">
         <nav id="navbar" class="navbar navbar-expand-lg navbar-light bg-default sticky-top shadow">
             <div class="container-lg">
                 @Html.Action("AddToCart", "Cart")
@@ -58,7 +54,7 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="@Url.Action("Catalog", "Toy")" class="nav-link d-flex">
+                            <a href="@Url.Action("GetCatalog", "Catalog")" class="nav-link d-flex">
                                 <i class="fa fa-cubes fa-2x"></i>
                                 <div class="navbar-text ml-2">
                                     Каталог
@@ -66,7 +62,7 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="@Url.Action(null, "Toy")" class="nav-link d-flex">
+                            <a href="@Url.Action("Index", "Delivery")" class="nav-link d-flex">
                                 <i class="fa fa-cube fa-2x"></i>
                                 <div class="navbar-text ml-2">
                                     Доставка
@@ -74,7 +70,7 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="@Url.Action(null, "Toy")" class="nav-link d-flex">
+                            <a href="@Url.Action("Index", "Contacts")" class="nav-link d-flex">
                                 <i class="fa fa-at fa-2x"></i>
                                 <div class=" navbar-text ml-2">
                                     Контакти
@@ -82,18 +78,10 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="@Url.Action("Index", "Editor")" class="nav-link d-flex">
+                            <a href="@Url.Action("Index", "CatalogEditor")" class="nav-link d-flex">
                                 <i class="fa fa-pencil fa-2x"></i>
                                 <div class=" navbar-text ml-2">
                                     Редактор
-                                </div>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="@Url.Action("Index", "CategoryEditor")" class="nav-link d-flex">
-                                <i class="fa fa-pencil fa-2x"></i>
-                                <div class="navbar-text ml-2">
-                                    Категорий
                                 </div>
                             </a>
                         </li>
@@ -105,11 +93,6 @@
 
 
     <div id="contentlist" class="container-lg">
-        @*<div class="d-flex justify-content-center">
-                <div id="loadingspinner" class="spinner-border" role="status" style="display:none;">
-                    <span class="sr-only">Завантаження...</span>
-                </div>
-            </div>*@
         @RenderBody()
     </div>
 

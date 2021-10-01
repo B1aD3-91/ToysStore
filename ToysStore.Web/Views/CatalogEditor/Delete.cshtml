@@ -1,0 +1,80 @@
+﻿@model ToysStore.Web.Models.DomainModel.Toy
+
+@{
+    ViewBag.Title = "Delete";
+}
+<style>
+    body {
+        background-image: url('../../Content/img/background/99px_ru_photo_317263_akula_s_medvejimi_lapkami_by_cryptidcreations.png');
+        background-repeat: no-repeat;
+        background-position: 50% 300px;
+        background-attachment: fixed;
+        background-size: 50%;
+    }
+</style>
+
+<h2 style="color:red;">Видалення</h2>
+
+<h3>Ви впевнені що хочете це видалити?</h3>
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Category.Categories)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Category.Categories)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Art)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Art)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Quantity)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Quantity)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Price)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Price)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PicSrc)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PicSrc)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-danger" /> 
+            @Html.ActionLink("Назад до списку", "Index", null, new { @class = "btn btn-warning"})
+        </div>
+    }
+</div>

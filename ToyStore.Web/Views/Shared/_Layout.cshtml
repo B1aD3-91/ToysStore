@@ -1,0 +1,113 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Cache-Control" content="no-cache">
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" />
+    <link rel="stylesheet" href="~/css/bundle.min.css" inline />
+</head>
+<body>
+
+    <div id="wrapper-container">
+        <div class="container-xl">
+            <div id="wrapper-row" class="row align-items-center">
+                <a class="col-sm" asp-controller="Main" asp-action="Index">
+                    <img id="logo" src="../content/logo.png" asp-append-version="true" />
+                </a>
+                <div class="col-sm">
+                    <div class="row gx-0">
+                        <div class="col-lg">
+                            <form asp-action="Search" asp-controller="Catalog"
+                                  data-ajax-success="onSuccess"
+                                  data-ajax="true"
+                                  data-ajax-method="POST"
+                                  data-ajax-mode="replace"
+                                  data-ajax-update="contentlist"
+                                  data-animation="loadingspinner">
+                                <div class="row gx-0 justify-content-center">
+                                    <div class=" col-lg-8 col-10">
+                                        <input name="s" id="section-search" class="form-control" type="search" placeholder="Пошук..." aria-label="Search" required />
+                                    </div>
+                                    <div class="col-lg-2 col-2">
+                                        <button id="section-search-btn" class="btn btn-light" type="submit"><i class="fa fa-search"></i></button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="top" class="container-lg">
+        <nav id="navbar" class="navbar navbar-expand-lg navbar-light bg-default sticky-top shadow">
+            <div class="container-lg">
+
+                <a class="fa fa-shopping-bag fa-2x" asp-controller="Cart" asp-action="Index"></a>
+                <a class="navbar-toggler" 
+                   role="button" 
+                   data-toggle="collapse" 
+                   data-target="#collapsecontent" 
+                   aria-controls="navbarSupportedContent" 
+                   aria-expanded="false" 
+                   aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </a>
+                <div class="collapse navbar-collapse justify-content-center" id="collapsecontent">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link d-flex" asp-controller="Main" asp-action="Index">
+                                <i class="fa fa-sun-o fa-2x" ></i>
+                                <div class="navbar-text ml-2">
+                                    Головна
+                                </div>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link d-flex" asp-controller="Catalog" asp-action="GetCatalog">
+                                <i class="fa fa-cubes fa-2x" ></i>
+                                <div class="navbar-text ml-2">
+                                    Каталог
+                                </div>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link d-flex" asp-controller="Delivery" asp-action="Index">
+                                <i class="fa fa-cube fa-2x"></i>
+                                <div class="navbar-text ml-2">
+                                    Доставка
+                                </div>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link d-flex" asp-controller="Contacts" asp-action="Index">
+                                <i class="fa fa-at fa-2x" ></i>
+                                <div class=" navbar-text ml-2">
+                                    Контакти
+                                </div>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link d-flex" asp-controller="CatalogEditor" asp-action="Index">
+                                <i class="fa fa-pencil fa-2x" ></i>
+                                <div class=" navbar-text ml-2">
+                                    Редактор
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+
+    <div id="contentlist" class="container-lg">
+        @RenderBody()
+    </div>
+    <script async src="~/js/bundle.min.js" inline ></script>
+</body>
+</html>

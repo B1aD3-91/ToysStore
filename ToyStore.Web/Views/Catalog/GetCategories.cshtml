@@ -1,0 +1,14 @@
+﻿@model ToysStore.Web.Models.ViewModel.CategoryViewModel
+
+@*@Html.ActionLink("Все", "GetCatalog", "Catalog", null, new { @class = "list-group-item list-group-item-action shadow-sm" })*@
+@*@foreach (var item in Model.Categories)
+{
+    @Html.RouteLink(item.Name, new { controller = "Catalog", action = "GetCatalog", category = item.Name }, new { @class = "list-group-item list-group-item-action shadow-sm" });
+}*@
+<div class="list-group">
+    @*<a class="list-group-item list-group-item-action" asp-controller="Catalog" asp-action="GetCatalog">Все</a>*@
+    <a class="list-group-item list-group-item-action">A second link item</a>
+    <a class="list-group-item list-group-item-action">A third link item</a>
+    <a class="list-group-item list-group-item-action">A fourth link item</a>
+    <a class="list-group-item list-group-item-action disabled" tabindex="-1" aria-disabled="true">A disabled link item</a>
+</div>

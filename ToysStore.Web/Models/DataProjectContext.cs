@@ -10,6 +10,6 @@ namespace ToysStore.Web.Models
         }
 
         public DbSet<Toy> Toys { get; set; }
-        public DbSet<ToyCategory> Categories { get; set; }
+        public DbSet<Category> Categories { get; set; }
     }
 }

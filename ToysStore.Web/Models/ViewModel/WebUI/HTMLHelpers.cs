@@ -9,9 +9,9 @@ namespace ToysStore.Web.Models.WebUI
         {
             int i = 1;
 
-            TagBuilder pagination = new TagBuilder("ul");
-            pagination.AddCssClass("pagination");
-            pagination.MergeAttribute("id", "PageUI");
+            TagBuilder pagger = new TagBuilder("ul");
+            pagger.AddCssClass("pagination");
+            pagger.MergeAttribute("id", "PageUI");
 
             for (; i <= pagingInfo.TotalPages; i++)
             {
@@ -28,9 +28,9 @@ namespace ToysStore.Web.Models.WebUI
                 a.InnerHtml = i.ToString();
 
                 li.InnerHtml += a.ToString();
-                pagination.InnerHtml += li.ToString();
+                pagger.InnerHtml += li.ToString();
             }
-            return new MvcHtmlString(pagination.ToString());
+            return new MvcHtmlString(pagger.ToString());
         }
 
     }

@@ -1,0 +1,66 @@
+﻿@model IEnumerable<ToysStore.Web.Models.DomainModel.Toy>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Список товару</h2>
+
+<p>
+    @Html.ActionLink("Додати товар", "Create", null, new { @class = "btn btn-warning" })
+    @Html.ActionLink("Додати категорію", "Index", "CategoryEditor", null, new { @class = "btn btn-warning" })
+</p>
+<table class="table table-striped table-hover table-responsive" style="opacity: 0.9;">
+   
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Category.Categories)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Art)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Quantity)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Price)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PicSrc)
+            </th>
+            <th></th>
+        </tr>
+    
+    
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Category.Categories)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Art)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Quantity)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Price)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.PicSrc)
+                </td>
+                <td align="right">
+                    @Html.ActionLink("Редагувати", "Edit", new { id = item.Id }, new { @class = "btn btn-warning" })
+                    @Html.ActionLink("Видалити", "Delete", new { id = item.Id }, new { @class = "btn btn-danger" })
+                </td>
+            </tr>
+        }
+    
+</table>

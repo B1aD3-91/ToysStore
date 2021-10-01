@@ -1,0 +1,31 @@
+﻿@model ToysStore.Web.Models.ViewModel.ToyViewModel
+@using ToysStore.Web.Models.WebUI
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<style>
+    body {
+        background-image: url('../content/background/99px_ru_photo_318632_akula_s_oshejnikom_by_cryptidcreations.png');
+        background-repeat: no-repeat;
+        background-position: 50% 300px;
+        background-attachment: fixed;
+        background-size: 50%;
+    }
+</style>
+
+<div class="row">
+    <div class="col-lg-3">
+       <a asp-controller="Catalog" asp-action="GetCategories">lol</a>
+    </div>
+    <div class="col-lg-9">
+        <div class="row">
+            @foreach (var item in Model.Toys)
+            {
+                @Html.PartialAsync("ToysListBody", item)
+            }
+        </div>
+        <nav>
+            @Html.PageLinks(Model.PagingInfo, x => Url.Action("GetCatalog", new { category = Model.CurrentCategory, page = x }))
+        </nav>
+    </div>
+</div>

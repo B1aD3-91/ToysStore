@@ -1,0 +1,138 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="ToysStore.Web.Controllers.AdminController.CatalogEditorController">
+    <Position X="3" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACARAACAAAAAAAAAAAEAAEACAAEAAAAAAAA=</HashCode>
+      <FileName>Controllers\AdminControllers\CatalogEditorController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ToysStore.Web.Controllers.AdminController.CategoryEditorController">
+    <Position X="1.25" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACARAACAAAAAAAAAAAEAAEACAAEAAAAAAAA=</HashCode>
+      <FileName>Controllers\AdminControllers\CategoryEditorController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ToysStore.Web.Controllers.CartController">
+    <Position X="5" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAEQAAAAACA=</HashCode>
+      <FileName>Controllers\CartController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ToysStore.Web.Controllers.CatalogController">
+    <Position X="3.25" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACEAAAAAAAAAAAAAAQAAAAAAAAAAAIAgABA=</HashCode>
+      <FileName>Controllers\CatalogController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ToysStore.Web.Controllers.ContactsController">
+    <Position X="8.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAA=</HashCode>
+      <FileName>Controllers\ContactsController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ToysStore.Web.Controllers.DeliveryController">
+    <Position X="5" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAA=</HashCode>
+      <FileName>Controllers\DeliveryController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ToysStore.Web.Controllers.MainController">
+    <Position X="1.5" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAA=</HashCode>
+      <FileName>Controllers\MainController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ToysStore.Web.Models.DataProjectContext">
+    <Position X="12.25" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAQAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\DataProjectContext.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ToysStore.Web.Models.DomainModel.CardList">
+    <Position X="12.25" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAgAAAAAA=</HashCode>
+      <FileName>Models\DomainModel\Cart.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ToysStore.Web.Models.DomainModel.Cart">
+    <Position X="10.5" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAAAAAAAAAgAAAAAAQAAAAAAgAAAAAAAAAAAAABCAAA=</HashCode>
+      <FileName>Models\DomainModel\Cart.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ToysStore.Web.Models.DomainModel.Shipping">
+    <Position X="12.25" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAAAAEAAAQAAAAAIAAgAAAAAAAAAAAAAAEAAIAAAIAg=</HashCode>
+      <FileName>Models\DomainModel\Shipping.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ToysStore.Web.Models.DomainModel.Toy">
+    <Position X="10.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAARAAAgAAAAAAAAQAAAAAAIAAAAAAgAAACAA=</HashCode>
+      <FileName>Models\DomainModel\Toy.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ToysStore.Web.Models.DomainModel.ToyCategory">
+    <Position X="6.75" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAASAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\DomainModel\Toy.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ToysStore.Web.Models.ViewModel.CartIndexViewModel">
+    <Position X="6.75" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAA=</HashCode>
+      <FileName>Models\ViewModel\CartIndexViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ToysStore.Web.Models.ViewModel.CategoryViewModel">
+    <Position X="6.75" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\ViewModel\CategoryViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ToysStore.Web.Models.ViewModel.ToyViewModel">
+    <Position X="6.75" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAQAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\ViewModel\ToyViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ToysStore.Web.Models.ViewModel.WebUI.CartModelBinder" BaseTypeListCollapsed="true">
+    <Position X="8.5" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAgAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\ViewModel\WebUI\Binders.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="ToysStore.Web.Models.WebUI.HTMLHelpers">
+    <Position X="8.5" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\ViewModel\WebUI\HTMLHelpers.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ToysStore.Web.Models.WebUI.PagingInfo">
+    <Position X="8.5" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAgAAAAAAAAAAAAAAAAABAAQAAAAAAAAAAAAAAAI=</HashCode>
+      <FileName>Models\ViewModel\WebUI\PagingInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

@@ -3,7 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30011.22
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ToysStore.Web", "ToysStore.Web\ToysStore.Web.csproj", "{CB735B2B-9906-48AD-9A27-D940D6E83D4A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ToysStore.Tests", "ToysStoreTests\ToysStore.Tests.csproj", "{5371C6F8-7BA7-49FC-92F6-5A5B07A1898A}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ToysStore.Domain", "ToysStoreDomain\ToysStore.Domain.csproj", "{F2DF6E14-89A2-46EE-89AF-7043281428C5}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ToysStore.Web", "ToyStore.Web\ToysStore.Web.csproj", "{1193DADA-C159-43C3-B474-BD06B58ABB3D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,10 +15,18 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{CB735B2B-9906-48AD-9A27-D940D6E83D4A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{CB735B2B-9906-48AD-9A27-D940D6E83D4A}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{CB735B2B-9906-48AD-9A27-D940D6E83D4A}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{CB735B2B-9906-48AD-9A27-D940D6E83D4A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5371C6F8-7BA7-49FC-92F6-5A5B07A1898A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5371C6F8-7BA7-49FC-92F6-5A5B07A1898A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5371C6F8-7BA7-49FC-92F6-5A5B07A1898A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5371C6F8-7BA7-49FC-92F6-5A5B07A1898A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F2DF6E14-89A2-46EE-89AF-7043281428C5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F2DF6E14-89A2-46EE-89AF-7043281428C5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F2DF6E14-89A2-46EE-89AF-7043281428C5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F2DF6E14-89A2-46EE-89AF-7043281428C5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1193DADA-C159-43C3-B474-BD06B58ABB3D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1193DADA-C159-43C3-B474-BD06B58ABB3D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1193DADA-C159-43C3-B474-BD06B58ABB3D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1193DADA-C159-43C3-B474-BD06B58ABB3D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
